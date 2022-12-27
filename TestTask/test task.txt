@@ -37,15 +37,15 @@ SQL
 |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 3.
 Artists
-Singer	||Album		||Year ||Sale
+Singer	        ||Album		        ||Year ||Sale
 Bon Jovi	||Have a Nice Day	||2005 ||1200000
 Scorpions	||Blackout		||1982 ||400000
 Iron Maiden	||Dance of Death	||2003 ||2300000
-Bon Jovi	||Crush		||2000 ||600000
-Bon Jovi	||2020		||2020 ||1500000
-Iron Maiden	||Piece of Mind	||1983 ||1200000
-Scorpions	||Crazy World	||1990 ||800000
-Iron Maiden	||Rock in Rio	||2002 ||1900000
+Bon Jovi	||Crush		        ||2000 ||600000
+Bon Jovi	||2020		        ||2020 ||1500000
+Iron Maiden	||Piece of Mind	        ||1983 ||1200000
+Scorpions	||Crazy World	        ||1990 ||800000
+Iron Maiden	||Rock in Rio	        ||2002 ||1900000
 Scorpions	||World Wide Live	||1985 ||500000
 
 	

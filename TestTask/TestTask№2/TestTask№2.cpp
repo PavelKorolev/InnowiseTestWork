@@ -1,32 +1,31 @@
 ﻿#include <iostream>
 #include <algorithm>
+
 using namespace std;
 
 int main()
 {
-	int a[] = { 1, 1, 3, 7, 9 };
-	int b[] = { 1, 4, 12, 12, 76 };
-	
-	int counta = sizeof(a) / sizeof(a[0]);
-	int countb = sizeof(b) / sizeof(b[0]);
+	int A[] = { 1, 1, 3, 7, 9 };
+	int B[] = { 1, 4, 12, 12, 76 };
 
-	int countc = counta + countb;
-	
-	int* c = new int[countc];
+	int countA = sizeof(A) / sizeof(A[0]);
+	int countB = sizeof(B) / sizeof(B[0]);
 
-	
-	for (int k = 0; k < countc; k++)
+	int countC = countA + countB;
+
+	int* C = new int[countC];
+
+	for (int k = 0; k < countC; k++)
 	{
-		if (k < counta) { c[k] = a[k]; }
-		else { c[k] = b[k - counta]; }
+		if (k < countA) { C[k] = A[k]; }
+		else { C[k] = B[k - countA]; }
 	}
 
-	sort(c, c + countc);
+	sort(C, C + countC);
 
-	cout << "sort array" << endl;
-	for (int i = 0; i < countc; i++)
+	for (int i = 0; i < countC; i++)
 	{
-		cout << c[i] << " ";
+		cout << C[i] << " ";
 	}
 	cout << endl;
 }
