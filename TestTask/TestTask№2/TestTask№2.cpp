@@ -5,6 +5,7 @@ using namespace std;
 
 int main()
 {
+	setlocale(LC_ALL, "");
 	int A[] = { 1, 1, 3, 7, 9 };
 	int B[] = { 1, 4, 12, 12, 76 };
 
@@ -23,9 +24,12 @@ int main()
 
 	sort(C, C + countC);
 
-	for (int i = 0; i < countC; i++)
+	cout << "Результат объединения двух отсортированных массивов в один массив, также упорядоченный по возрастанию: " << endl;
+
+	for (int i = 0; i < countC - 1; i++)
 	{
-		cout << C[i] << " ";
+		cout << C[i] << ", ";
 	}
+	cout << C[countC - 1];
 	cout << endl;
 }

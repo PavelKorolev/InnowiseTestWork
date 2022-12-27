@@ -11,19 +11,21 @@ void findPair(int nums[], int n, int target);
 
 int main()
 {
+	setlocale(LC_ALL, "");
 	int nums[n];
-	fstream f;
-	f.open("Input task1.txt");
-	if (f) {
+	fstream file;
+	file.open("Input task1.txt");
+	if (file) {
 		for (int i = 0; i < n; i++)
 		{
-			f >> nums[i];
+			file >> nums[i];
 		}
 	}
 
 	int target = 2023;
+	cout << "Первая подходящая пара ульев: " << endl;
 	findPair(nums, n, target);
-	f.close();
+	file.close();
 
 	return 0;
 }
