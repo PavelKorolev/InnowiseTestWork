@@ -1,7 +1,8 @@
 ﻿#include <iostream>
-#include <algorithm>
 
 using namespace std;
+
+void mergeArrays(int A[], int B[], int countA, int countB, int* C);
 
 int main()
 {
@@ -16,13 +17,7 @@ int main()
 
 	int* C = new int[countC];
 
-	for (int k = 0; k < countC; k++)
-	{
-		if (k < countA) { C[k] = A[k]; }
-		else { C[k] = B[k - countA]; }
-	}
-
-	sort(C, C + countC);
+	mergeArrays(A, B, countA, countB, C);
 
 	cout << "Результат объединения двух отсортированных массивов в один массив, также упорядоченный по возрастанию: " << endl;
 
@@ -32,4 +27,21 @@ int main()
 	}
 	cout << C[countC - 1];
 	cout << endl;
+}
+
+void mergeArrays(int A[], int B[], int countA, int countB, int* C)
+{
+	int i = 0;
+	int j = 0;
+	int k = 0;
+
+	while (i < countA && j < countB)
+	{
+		if (A[i] < B[j]) { C[k] = A[i]; i++; k++; }
+		else { C[k] = B[j]; j++; k++; }
+	}
+
+	while (i < countA) { C[k] = A[i]; i++; k++; }
+
+	while (j < countB) { C[k] = B[j]; j++; k++; }
 }
